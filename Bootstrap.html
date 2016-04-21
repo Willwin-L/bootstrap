@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="jquery-1.8.3.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style>
+/*    *{background:#ccc;opacity: 0.9;z-index: 1}*/
+  </style>
+</head>
+<body>
+<!--栅格系统-->
+<!--  将最外面的布局元素 .container 修改为 .container-fluid，就可以将固定宽度的栅格布局转换为 100% 宽度的布局-->
+  <div class="container-fluid bg-danger">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 bg-info"><h2>标题一</h2></div>
+        <div class="col-lg-6 col-md-4 col-sm-4  col-xs-12 bg-success"><h2>标题二</h2></div>
+        <div class="col-lg-3 col-md-4 col-sm-8  col-xs-12 bg-warning"><h2>标题三</h2></div>
+      </div>
+
+    <div class="row">
+<!--      如果在一个 .row 内包含的列（column）大于12个，包含多余列（column）的元素将作为一个整体单元被另起一行排列 xs-->
+      <div class="col-lg-6 col-md-4 col-sm-12 col-xs-4 bg-success"><h3>这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字 这里是一大段文字</h3></div>
+      <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 bg-primary"><h3>偏移2</h3></div>
+      <div class="clearfix visible-xs-block"></div>
+      <div class="col-lg-2 col-md-4 col-sm-4 col-xs-8 bg-info"><h3>偏移3</h3></div>
+    </div>
+<!--   列的偏移-->
+      <div class="row">
+        <div class="col-lg-8 col-md-4 col-lg-offset-4  bg-info"><h2>lg将列向右偏移3</h2></div>
+        <div class="col-lg-6 col-md-4 col-sm-4  col-md-offset-6 bg-primary"><h2>md向右偏移4</h2></div>
+        <div class="col-lg-3 col-md-4 col-sm-8  col-sm-offset-2 bg-warning"><h2>sm向右偏移2</h2></div>
+      </div>
+<!--   嵌套列-->
+   <div class="row">
+     <div class="col-lg-4 col-md-4 col-sm-4 bg-primary">
+       <h3>一标题</h3>
+     <div class="row">
+       <div class="col-lg-6 col-md-8 col-sm-3 bg-info"><h3>内容一</h3></div>
+       <div class="col-lg-6 col-md-4 col-sm-3 bg-success"><h3>内容二</h3></div>
+     </div>
+     
+     </div>
+   </div>
+<!--   列排序 调换顺序-->
+    <div class="row">
+      <div class="col-lg-8 col-lg-push-4 bg-primary"><h2>顺序一</h2></div>
+      <div class="col-lg-4 col-lg-pull-8 bg-warning"><h2>顺序二</h2></div>
+    </div>
+   
+<!-- 排版  -->
+<!--  标题 small 标签可以用来标记副标题-->
+      <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+      <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+      <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+      <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+      <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+      <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+  
+<!--   页面主体-->
+      <p>Bootstrap 将全局 font-size 设置为 14px，line-height 设置为 1.428。这些属性直接赋予 body标签 元素和所有段落元素。另外，p标签 （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）</p>
+      
+      
+<!--      中心内容-->
+      <p class="lead">通过添加 .lead 类可以让段落突出显示</p>
+      
+<!--      内联文本元素-->
+<!--      标记文本-->
+      <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<!--      被删除的文本-->
+      <del>对于被删除的文本使用 del 标签</del><br>
+<!--      无用文本-->
+      <s>对于没用的文本使用 s 标签。</s><br>
+<!--      插入文本-->
+      <ins>额外插入的文本使用 ins 标签。</ins><br>
+<!--      带下划线的文本-->
+      <u>为文本添加下划线，使用 u 标签</u><br>
+<!--      小号文本-->
+      <small>对于不需要强调的inline或block类型的文本，使用 small 标签包裹，其内的文本将被设置为父容器字体大小的 85%。标题元素中嵌套的 small 元素被设置不同的 font-size 。
+
+        你还可以为行内元素赋予 .small 类以代替任何 small 元素。</small><br>
+<!--        着重-->
+      <strong>通过增加 font-weight 值强调一段文本</strong><br>
+<!--      斜体-->
+      <em>用斜体强调一段文本</em>
+<!--      对齐-->
+      <p class="text-left">Left aligned text.</p>
+      <p class="text-center">Center aligned text.</p>
+      <p class="text-right">Right aligned text.</p>
+      <p class="text-justify">Justified text.</p>
+<!--      引用-->
+<!--   默认样式的引用-->
+      <blockquote>
+        <p>将任何 HTML 元素包裹在 blockquote 中即可表现为引用样式。对于直接引用，我们建议用 p 标签</p>
+      </blockquote>
+<!--      多种样式的引用-->
+      <blockquote>
+        <p>添加 footer标签 用于标明引用来源。来源的名称可以包裹进 cite标签中</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+<!--      另一种样式的引用-->
+      <blockquote class="blockquote-reverse">
+        <p>通过赋予 .blockquote-reverse 类可以让引用呈现内容右对齐的效果</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+<!--      内联列表 通过设置 display: inline-block; 并添加少量的内补（padding），将所有元素放置于同一行-->
+      <ul class="list-inline">
+        <li>Lorem ipsum   Phasellus iaculis   Nulla volutpat</li>
+      </ul>
+<!--      描述-->
+      <dl>
+        <dt>Description lists</dt>
+        <dd>A description list is perfect for defining terms.</dd>
+        <dd>A description list is perfect for defining terms.</dd>
+        <dt>Description lists</dt>
+        <dd>A description list is perfect for defining terms.</dd>
+      </dl>
+<!--      水平排列的描述-->
+      <dl class="dl-horizontal">
+        <dt>自动截断ts</dt>
+        <dd>通过 text-overflow 属性，水平排列的描述列表将会截断左侧太长的短语。在较窄的视口（viewport）内，列表将变为默认堆叠排列的布局方式。</dd>
+      </dl>
+      
+ 
+      
+
+<!--      表格     
+通过 .table-striped 类可以给 <tbody> 之内的每一行增加斑马条纹样式
+添加 .table-bordered 类为表格和其中的每个单元格增加边框
+通过添加 .table-hover 类可以让 <tbody> 中的每一行对鼠标悬停状态作出响应-->
+      <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+          <!--  状态类--通过这些状态类可以为行或单元格设置颜色.active   .danger-->
+          <tr class="success">
+            <th>111</th>
+            <th>222</th>
+            <th>333</th>
+            <th>4444</th>
+            <th>5555</th>
+          </tr>
+          <tr class="info">
+            <td class="danger">111</td>
+            <td class="active">222</td>
+            <td class="sucess">333</td>
+            <td class="warning">4444</td>
+            <td>5555</td>
+          </tr>
+          <tr class="warning">
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>4444</td>
+            <td>5555</td>
+          </tr>
+        </table>
+      </div>
+ 
+      
+           
+                
+<!--   表单     -->
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+      
+<!--      水平排列的表单-->
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-4">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </form>
+      
+      
+      
+<!--      被支持的控件-->
+<!--   多选和单选框-->
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="checkbox disabled">
+        <label>
+          <input type="checkbox" value="" disabled>
+          Option two is disabled
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
+      <div class="radio disabled">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+          Option three is disabled
+        </label>
+      </div>
+      
+      
+<!--内联单选和多选框-->
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+      </label>
+
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+      </label>
+      
+<!--下拉列表   -->
+      <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      
+<!--静态控件 -->
+      
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">email@example.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          </div>
+        </div>
+      </form>
+      
+<!--   禁用状态   -->  
+      <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+      
+<!--   只读状态   -->
+      <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+      
+      
+      
+      
+      
+<!--    按钮    -->
+      <a class="btn btn-default" href="#" role="button">Link</a>
+      <button class="btn btn-default" type="submit">Button</button>
+      <input class="btn btn-default" type="button" value="Input">
+      <input class="btn btn-default" type="submit" value="Submit"><br>
+      
+<!--按钮的 预定义样式-->
+      <!--      使用 .btn-lg、.btn-sm 或 .btn-xs 就可以获得不同尺寸的按钮-->
+      <button type="button" class="btn btn-default btn-lg">（默认样式）Default</button><br>
+
+      <!--      通过给按钮添加 .btn-block 类可以将其拉伸至父元素100%的宽度，而且按钮也变为了块级（block）元素-->
+      <button type="button" class="btn btn-primary btn-block">（首选项）Primary</button><br>
+
+      <!--      由于 :active 是伪状态，因此无需额外添加，但是在需要让其表现出同样外观的时候可以添加 .active 类-->
+      <button type="button" class="btn btn-success btn-md active">（成功）Success</button><br>
+
+      <button type="button" class="btn btn-info " disabled="disabled">（一般信息）Info</button><br>
+
+      <button type="button" class="btn btn-warning btn-sm">（警告）Warning</button><br>
+
+      <button type="button" class="btn btn-danger btn-xs">（危险）Danger</button><br>
+
+      <button type="button" class="btn btn-link ">（链接）Link</button>
+      
+      
+<!--    图片     -->
+      <img src="4.png" class="img-responsive" alt="Responsive image">
+      
+      <img src="2.png" alt="..." class="img-rounded">
+      <img src="3.png" alt="..." class="img-circle">
+      <img src="1.png" alt="..." class="img-thumbnail">
+      
+    </div>
+  </div>
+</body>
+</html>
